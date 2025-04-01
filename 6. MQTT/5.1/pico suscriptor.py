@@ -45,8 +45,11 @@ def mostrar_oled(oled, message, n):
 
 # -- Conectar a WiFi -- #
 def conectar_wifi(oled):
-    wifi_ssid = "CARPINCHO_CERVEZERO"
-    wifi_password = "cartman123*"
+    '''
+    reemplazar con sus datos
+    wifi_ssid = " "
+    wifi_password = " "
+    ''' 
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
     wlan.connect(wifi_ssid, wifi_password)
@@ -66,12 +69,16 @@ def suscriptor(oled):
 
     # Detalles del servidor MQTT
     mqtt_host = "io.adafruit.com"
-    mqtt_username = "claurodz23"  # Nombre de usuario de Adafruit IO
-    mqtt_password = "aio_AZhi42pzoZw5F1UkQD1SJ4DDJKjW"  # Clave de Adafruit IO
-    mqtt_receive_topic = "claurodz23/feeds/prueba-pico"  # Tema para recibir mensajes
-    mqtt_ack_topic = "claurodz23/feeds/prueba-pico2"  # Tema para enviar ACKs
+   '''
+    reemplazar con sus datos
+    mqtt_username = " "
+    mqtt_password = " "
+    mqtt_publish_topic = " "
+    mqtt_ack_topic = " "
 
-    mqtt_client_id = "claudiaelenarodriguezdesio_subscriber_led_control"
+    # ID único para el cliente MQTT
+    mqtt_client_id = " "
+    '''
 
     mqtt_client = MQTTClient(
         client_id=mqtt_client_id,
